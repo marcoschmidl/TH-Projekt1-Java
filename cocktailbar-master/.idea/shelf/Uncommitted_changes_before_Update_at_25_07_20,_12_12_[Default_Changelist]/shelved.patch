@@ -1,0 +1,28 @@
+Index: test1/src/StartUp.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>public final class StartUp {\n\n    public static void main(String[] args) {\n\n        System.out.println(\"Kassensystem wird geladen.\");\n        System.out.println(\"Kassensystem ist jetzt einsatzbereit.\");\n\n\n    }\n\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- test1/src/StartUp.java	(revision 018d82e113e51914ca246b3252e1633f0b0177fe)
++++ test1/src/StartUp.java	(date 1595670180169)
+@@ -1,3 +1,5 @@
++import java.util.ArrayList;
++
+ public final class StartUp {
+ 
+     public static void main(String[] args) {
+@@ -6,6 +8,12 @@
+         System.out.println("Kassensystem ist jetzt einsatzbereit.");
+ 
+ 
++
++
+     }
++
++    //public static void getraenkekarte (ArrayList){
++
++ //   }
+ 
+ }

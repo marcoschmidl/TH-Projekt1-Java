@@ -1,0 +1,24 @@
+<changelist name="Uncommitted_changes_before_Update_at_05_08_20,_16_22_[Default_Changelist]" date="1596637371636" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_08_20,_16_22_[Default_Changelist]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 05.08.20, 16:22 [Default Changelist]" />
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/CocktailBar/META-INF/CocktailBar.kotlin_module" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/CocktailBar/Tisch.class" />
+    <option name="AFTER_PATH" value="out/production/CocktailBar/Tisch.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_08_20,_16_22_[Default_Changelist]/Tisch.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/CocktailBar/KassenBefehle.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/CocktailBar/StartUp.class" />
+    <option name="AFTER_PATH" value="out/production/CocktailBar/StartUp.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_08_20,_16_22_[Default_Changelist]/StartUp.class" />
+  </binary>
+</changelist>

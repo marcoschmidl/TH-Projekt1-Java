@@ -1,0 +1,96 @@
+Index: test1/src/StartUp.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import java.util.ArrayList;\nimport java.util.HashMap;\nimport java.util.HashMap;\nimport java.util.Map;\nimport java.util.Iterator;\nimport java.util.Set;\n\n\npublic final class StartUp {\n\n    public static void main(String[] args) {\n\n        double zwischenspeicher = 0;\n      // Getränke hier in der ArrayListe erstellen\n\n        UnalkoholischeGetraenke<String, Double> wasser = new UnalkoholischeGetraenke<>(\"Wasser     \", 2.80, \"Adelholzner\");\n        UnalkoholischeGetraenke<String, Double> spezi = new UnalkoholischeGetraenke<>(\"Spezi      \", 2.80, \"Flötzinger\");\n        UnalkoholischeGetraenke<String, Double> limo = new UnalkoholischeGetraenke<>(\"Apfelsaft  \", 2.80, \"Adelholzner\");\n\n        Bier<String, Double> helles = new Bier<>(\"Helles     \", 3.20, \"16\", 5.0, \"   Flötzinger\");\n        Bier<String, Double> dunklesbier = new Bier<>(\"Dunklesbier\", 3.30, \"16\", 5.2, \"   Augustiner\");\n        Bier<String, Double> weißbier = new Bier<>(\"Weißbier   \", 2.80, \"16\", 5.2, \"   Schneider\");\n\n        Cocktail<String, Double> vodkabull = new Cocktail<>(\"VodkaLemon \", 8.2, \"18\", 15,   \"LemonWater\",  \"  Vodka\");\n        Cocktail<String, Double> gintonic = new Cocktail<>(\"Gintonic   \", 8.8, \"18\", 16,   \"TonicWater\",  \"  Gin  \");\n        Cocktail<String, Double> mojito = new Cocktail<>(\"Mojito     \", 8.5, \"18\", 16.5, \"SodaWater\", \"  Rum  \");\n\n\n        HashMap<String, VorlageGetraenk> getraenkeHashMap = new HashMap<String, VorlageGetraenk>();\n        getraenkeHashMap.put(\"1\",wasser);\n        getraenkeHashMap.put(\"2\",spezi);\n        getraenkeHashMap.put(\"3\",limo);\n        getraenkeHashMap.put(\"4\",helles);\n        getraenkeHashMap.put(\"5\",dunklesbier);\n        getraenkeHashMap.put(\"6\",weißbier);\n        getraenkeHashMap.put(\"7\",vodkabull);\n        getraenkeHashMap.put(\"8\", gintonic);\n        getraenkeHashMap.put(\"9\", mojito);\n\n        // Map erstellen + paar ausgaben\n        HashMap<String, VorlageGetraenk> test = new HashMap<String, VorlageGetraenk>();\n        //System.out.println(test.size());\n        //System.out.println(test.get(\"1\"));\n        //System.out.println(test.size());\n        // loop\n        System.out.println(\"____________________________________________\");\n        for(Map.Entry<String, VorlageGetraenk> entry : getraenkeHashMap.entrySet())\n        {System.out.println(entry.getValue()) ;\n        }\n        System.out.println(\"____________________________________________\");\n        //System.out.println(getraenkeHashMap.size());\n        //System.out.println(getraenkeHashMap.isEmpty());\n        //System.out.println(getraenkeHashMap.keySet());\n\n        // Kasse Starten\n        KassenBefehle.KasseHochfahren();\n      // Bedienungsoberfläche - Auswahl\n      //  KassenBefehle.getränkeMöglichkeiteAusgeben(getraenkeListe);\n\n        Tisch tischEins = new Tisch(1);\n        ArrayList<VorlageGetraenk> tischeins = new ArrayList<>();\n        tischEins.zeigeTisch();\n        tischeins.add(wasser);\n        tischeins.add(spezi);\n        tischeins.add(helles);\n        tischEins.zeigeBestellung2();\n\n        double sum = 0;\n        for (VorlageGetraenk<String, Double> z : tischeins) {\n            System.out.print(z.getName());\n            System.out.print(\" \");\n            System.out.println(z.getPreis() + \" EUR\");\n            sum = sum + z.getPreis();\n        }\n\n        zwischenspeicher = zwischenspeicher + sum;\n        tischEins.zeigeRechnungssumme(sum);\n        tischEins.tischAbrechnen(tischeins, sum);\n\n        Tisch tischZwei = new Tisch(2);\n        ArrayList<VorlageGetraenk> tischzwei = new ArrayList<>();\n        tischZwei.zeigeTisch();\n        tischzwei.add(mojito);\n        tischzwei.add(limo);\n        tischZwei.zeigeBestellung2();\n\n        double sum2 = 0;\n        for (VorlageGetraenk<String, Double> z : tischzwei) {\n            System.out.print(z.getName());\n            System.out.print(\" \");\n            System.out.println(z.getPreis() + \" EUR\");\n            sum2 = sum2 + z.getPreis();\n        }\n        tischZwei.zeigeRechnungssumme(sum2);\n        zwischenspeicher = zwischenspeicher + sum2;\n        tischZwei.tischAbrechnen(tischzwei, sum2);\n        tischZwei.zeigeTagesumsatz(zwischenspeicher);\n\n        KassenBefehle.KasseRunterfahren();\n    }\n// test VCS\n}\n\n// methoden die nützlich sein könnten\n   /* static final int hash(Object key) {\n        int h;\n        return (key == null) ? 0 : (h = key.hashCode()) ^ (h >>> 16);\n\n    */\n\n// erstelltest Getränk der Liste hinzufügen\n      /*  ArrayList<VorlageGetraenk> getraenkeListe = new ArrayList<>();\n        getraenkeListe.add(wasser);\n        getraenkeListe.add(spezi);\n        getraenkeListe.add(limo);\n        getraenkeListe.add(helles);\n        getraenkeListe.add(dunklesbier);\n        getraenkeListe.add(weißbier);\n        getraenkeListe.add(vodkabull);\n        getraenkeListe.add(gintonic);\n        getraenkeListe.add(mojito); */\n// HashMap = optional änderung zu Array List
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- test1/src/StartUp.java	(revision 81aab3f1fca85a67d9402a23d9c73ab9136aa162)
++++ test1/src/StartUp.java	(date 1596577760826)
+@@ -25,7 +25,6 @@
+         Cocktail<String, Double> gintonic = new Cocktail<>("Gintonic   ", 8.8, "18", 16,   "TonicWater",  "  Gin  ");
+         Cocktail<String, Double> mojito = new Cocktail<>("Mojito     ", 8.5, "18", 16.5, "SodaWater", "  Rum  ");
+ 
+-
+         HashMap<String, VorlageGetraenk> getraenkeHashMap = new HashMap<String, VorlageGetraenk>();
+         getraenkeHashMap.put("1",wasser);
+         getraenkeHashMap.put("2",spezi);
+@@ -37,20 +36,13 @@
+         getraenkeHashMap.put("8", gintonic);
+         getraenkeHashMap.put("9", mojito);
+ 
+-        // Map erstellen + paar ausgaben
+-        HashMap<String, VorlageGetraenk> test = new HashMap<String, VorlageGetraenk>();
+-        //System.out.println(test.size());
+-        //System.out.println(test.get("1"));
+-        //System.out.println(test.size());
+-        // loop
++
+         System.out.println("____________________________________________");
+         for(Map.Entry<String, VorlageGetraenk> entry : getraenkeHashMap.entrySet())
+         {System.out.println(entry.getValue()) ;
+         }
+         System.out.println("____________________________________________");
+-        //System.out.println(getraenkeHashMap.size());
+-        //System.out.println(getraenkeHashMap.isEmpty());
+-        //System.out.println(getraenkeHashMap.keySet());
++
+ 
+         // Kasse Starten
+         KassenBefehle.KasseHochfahren();
+Index: test1/src/Tisch.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>public class Tisch extends KassenBefehle {\n\n    private int tischnr;\n    private Object bestellung [];\n\n    public Tisch(int tischnr){\n        this.tischnr = tischnr;\n    }\n\n    public int getTischnr(){\n        return tischnr;\n    }\n\n    public void zeigeTisch(){\n        System.out.println(\"____________________________________________\");\n        System.out.println();\n        System.out.println(\"Ihre Tischnummer ist: \" + getTischnr());\n    }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- test1/src/Tisch.java	(revision 81aab3f1fca85a67d9402a23d9c73ab9136aa162)
++++ test1/src/Tisch.java	(date 1596577956200)
+@@ -1,12 +1,21 @@
++import java.io.ObjectStreamException;
++import java.util.HashMap;
++import java.util.Map;
++
+ public class Tisch extends KassenBefehle {
+ 
+     private int tischnr;
+     private Object bestellung [];
++    private HashMap tisch1;
++
+ 
+     public Tisch(int tischnr){
+         this.tischnr = tischnr;
+     }
+ 
++
++    
++
+     public int getTischnr(){
+         return tischnr;
+     }
+Index: test1/src/KassenBefehle.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import java.util.ArrayList;\nimport java.util.HashMap;\n\npublic class KassenBefehle {\n\n    public static void zeigeBestellung (ArrayList list){\n        System.out.println();\n        System.out.println(\"Auf diesen Tisch sind folgende Getränke gebucht: \");\n        for(Object z : list){\n            System.out.println(z);\n        }\n    }\n\n    public static void KasseHochfahren(){\n        System.out.println(\"Kassensystem wird geladen.\");\n        System.out.println(\"Kassensystem ist jetzt einsatzbereit.\");\n        System.out.println(\"Bitte wählen sie ein Getränk aus\");\n    }\n\n    public  static void getränkeMöglichkeiteAusgeben (ArrayList list){\n        for(Object z : list){\n            System.out.println(z);\n        }\n        System.out.println(\"____________________________________________\");\n    }\n\n    public static void zeigeBestellung2 (){\n        System.out.println(\"Ihre Bestellung enthält: \");\n    }\n\n    public static void zeigeRechnungssumme (double sum){\n        System.out.println(\"Die Rechnungssume beträgt: \" + sum + \" EUR\");\n    }\n\n    public static void zeigeTagesumsatz (double zwischenspeicher){\n        System.out.println();\n        System.out.println(\"____________________________________________\");\n        System.out.println(\"Der Tagesumsatz beträgt: \" + zwischenspeicher);\n    }\n\n    public static double tischAbrechnen (ArrayList list, double sum){\n        list.clear();\n        System.out.println(\"Tisch abrechnen...\");\n        System.out.println(\"Die Rechnung in Höhe von \" + sum + \" EUR wurde bezahlt.\");\n        sum = 0;\n        return sum;\n    }\n\n    public static void KasseRunterfahren(){\n        System.out.println();\n        System.out.println(\"Kasse wird heruntergefahren.....\");\n        System.out.println(\"....Kasse ist aus.\");\n    }\n\n}\n/* double sum = 0;\n        for (VorlageGetraenk<String, Double> z : tischeins) {\n            System.out.print(z.getName());\n            System.out.print(\" \");\n            System.out.println(z.getPreis() + \" EUR\");\n            sum = sum + z.getPreis();\n        }*/\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- test1/src/KassenBefehle.java	(revision 81aab3f1fca85a67d9402a23d9c73ab9136aa162)
++++ test1/src/KassenBefehle.java	(date 1596577760822)
+@@ -1,5 +1,6 @@
+ import java.util.ArrayList;
+ import java.util.HashMap;
++import java.util.Map;
+ 
+ public class KassenBefehle {
+ 
+@@ -52,6 +53,8 @@
+         System.out.println("....Kasse ist aus.");
+     }
+ 
++
++
+ }
+ /* double sum = 0;
+         for (VorlageGetraenk<String, Double> z : tischeins) {

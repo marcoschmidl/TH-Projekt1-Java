@@ -1,0 +1,112 @@
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_25_07_20__10_38__Default_Changelist_.xml
+===================================================================
+--- .idea/shelf/Uncommitted_changes_before_Update_at_25_07_20__10_38__Default_Changelist_.xml	(revision bdd141f76ebb34419cc60f43f25821af146f510d)
++++ .idea/shelf/Uncommitted_changes_before_Update_at_25_07_20__10_38__Default_Changelist_.xml	(revision bdd141f76ebb34419cc60f43f25821af146f510d)
+@@ -1,14 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Update_at_25_07_20,_10_38_[Default_Changelist]" date="1595666320149" recycled="true" deleted="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_25_07_20,_10_38_[Default_Changelist]/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Update at 25.07.20, 10:38 [Default Changelist]" />
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="out/production/CocktailBar/Getraenke2/TestMain2$2.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_25_07_20,_10_38_[Default_Changelist]/TestMain2$2.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" />
+-    <option name="AFTER_PATH" value="out/production/CocktailBar/Getraenke2/TestMain2.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_25_07_20,_10_38_[Default_Changelist]/TestMain2.class" />
+-  </binary>
+-</changelist>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_25_07_20__12_12__Default_Changelist_1.xml
+===================================================================
+--- .idea/shelf/Uncommitted_changes_before_Update_at_25_07_20__12_12__Default_Changelist_1.xml	(revision bdd141f76ebb34419cc60f43f25821af146f510d)
++++ .idea/shelf/Uncommitted_changes_before_Update_at_25_07_20__12_12__Default_Changelist_1.xml	(revision bdd141f76ebb34419cc60f43f25821af146f510d)
+@@ -1,4 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Update_at_25_07_20,_12_12_[Default_Changelist]1" date="1595672013069" recycled="true" deleted="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_25_07_20,_12_12_[Default_Changelist]1/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Update at 25.07.20, 12:12 [Default Changelist]" />
+-</changelist>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_25_07_20__13_09__Default_Changelist_.xml
+===================================================================
+--- .idea/shelf/Uncommitted_changes_before_Update_at_25_07_20__13_09__Default_Changelist_.xml	(revision bdd141f76ebb34419cc60f43f25821af146f510d)
++++ .idea/shelf/Uncommitted_changes_before_Update_at_25_07_20__13_09__Default_Changelist_.xml	(revision bdd141f76ebb34419cc60f43f25821af146f510d)
+@@ -1,4 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Update_at_25_07_20,_13_09_[Default_Changelist]" date="1595675348410" recycled="true" deleted="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_25_07_20,_13_09_[Default_Changelist]/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Update at 25.07.20, 13:09 [Default Changelist]" />
+-</changelist>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_25_07_20,_13_09_[Default_Changelist]/shelved.patch
+===================================================================
+--- .idea/shelf/Uncommitted_changes_before_Update_at_25_07_20,_13_09_[Default_Changelist]/shelved.patch	(revision bdd141f76ebb34419cc60f43f25821af146f510d)
++++ .idea/shelf/Uncommitted_changes_before_Update_at_25_07_20,_13_09_[Default_Changelist]/shelved.patch	(revision bdd141f76ebb34419cc60f43f25821af146f510d)
+@@ -1,14 +0,0 @@
+-Index: test1/src/StartUp.java
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+> import Getr\nimport java.util.ArrayList;\n\npublic final class StartUp {\n\n    public static void main(String[] args) {\n\n        VorlageGetaenke<String, Double> wasser = new VorlageGetaenke<>(\"Wasser\",2.80);\n        VorlageGetaenke<String, Double> spezi = new VorlageGetaenke<>(\"Spezi\",2.80);\n        VorlageGetaenke<String, Double> apfelschorle = new VorlageGetaenke<>(\"Apfelschorle\",2.80);\n\n        VorlageGetaenke<String, Double> helles = new VorlageGetaenke<>(\"Helles\",3.20, true, 5.0,\"Flötzinger\");\n        VorlageGetaenke<String, Double> dunklesbier = new VorlageGetaenke<>(\"Dunklesbier\",3.30,true,5.2,\"Augustier\");\n        VorlageGetaenke<String, Double> weißbier = new VorlageGetaenke<>(\"Weißbier\",2.80,true,5.2,\"Schneider\");\n\n        VorlageGetaenke<String, Double> vodkabull = new VorlageGetaenke<>(\"VodkaLemon\",8.2,true,15,\"LemonWater\",\"Vodka\");\n        VorlageGetaenke<String, Double> gintonic = new VorlageGetaenke<>(\"Gintonic\",8.8,true,16,\"TonicWater\");\n        VorlageGetaenke<String, Double> mojito = new VorlageGetaenke<>(\"Mojito\",8.5,true,16.5,\"SodaWater\",\"Rum\");\n\n        ArrayList<VorlageGetaenke> getraenkeListe = new ArrayList<>();\n        getraenkeListe.add(wasser);\n        getraenkeListe.add(spezi);\n        getraenkeListe.add(apfelschorle);\n        getraenkeListe.add(helles);\n        getraenkeListe.add(dunklesbier);\n        getraenkeListe.add(weißbier);\n        getraenkeListe.add(vodkabull);\n        getraenkeListe.add(gintonic);\n        getraenkeListe.add(mojito);\n\n\n        System.out.println(\"Kassensystem wird geladen.\");\n        System.out.println(\"Kassensystem ist jetzt einsatzbereit.\");\n\n        VorlageGetaenke[] vodkabull1 = new VorlageGetaenke[]{\n                new VorlageGetaenke(\"Vodka Bull\", 8.00,true,40.0,\"Red Bull\", \"Vodka\")\n        };\n        VorlageGetaenke[] vodkalemon = new VorlageGetaenke[]{\n                new VorlageGetaenke(\"Vodka Lemon\", 7.50,true,40.0,\"Lemon\", \"Vodka\")\n        };\n        VorlageGetaenke[] vodkakirsch = new VorlageGetaenke[]{\n                new VorlageGetaenke(\"Vodka Kirsch\", 7.50, true, 40.0, \"Kirsch\", \"Vodka\")\n        };\n\n        VorlageGetaenke[] Bestellung = new VorlageGetaenke[]{\n                new VorlageGetaenke(\"Vodka Schwarze Dose\", 8.00)\n        };\n\n        Bestellung eins = new Bestellung(1, Bestellung);\n        eins.bestellen();\n\n        System.out.println(\"------------Ausgabe von anderem Lösungsansatz--------------------\");\n\n        System.out.println(\"Getränkemöglichkeiten \");\n\n\n\n       //* for (VorlageGetaenke getraenke : getraenkeListe){\n        //    System.out.println(\"Name  \" +\" \\t \" + getraenke.getName() +  \" \\t \" +  \"Preis  \" + \" \\t \" + getraenke.getPreis());\n      //  }\n        ////////////////////////////////////////////////////////////\n   //\n    }\n\n\n\n}\n
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+---- test1/src/StartUp.java	(revision 4335cba87f0ba7bdaaa537b8fdecbe128613dade)
+-+++ test1/src/StartUp.java	(date 1595675344191)
+-@@ -1,4 +1,3 @@
+-- import Getr
+- import java.util.ArrayList;
+- 
+- public final class StartUp {
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_25_07_20,_12_12_[Default_Changelist]1/shelved.patch
+===================================================================
+--- .idea/shelf/Uncommitted_changes_before_Update_at_25_07_20,_12_12_[Default_Changelist]1/shelved.patch	(revision bdd141f76ebb34419cc60f43f25821af146f510d)
++++ .idea/shelf/Uncommitted_changes_before_Update_at_25_07_20,_12_12_[Default_Changelist]1/shelved.patch	(revision bdd141f76ebb34419cc60f43f25821af146f510d)
+@@ -1,46 +0,0 @@
+-Index: test1/src/GetraenkObjekt/Getraenk.java
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+>package GetraenkObjekt;\n//S String, D double, B boolean\n// wenn alkoholgehalt = Check ob 18\npublic  abstract class  Getraenk <S,D> {\n         private S name;\n         private D preis;\n         private double alkoholgehalt;\n         private S mischgetränk;\n         private S spirituose;\n         private S marke;\n\n     public Getraenk(){};\n\n     // konstrukor unalk2\n     public Getraenk(S name, D preis ){\n         this.name = name;\n         this.preis = preis;\n     }\n\n     // konstruktor bier2\n     public Getraenk(S name, D preis, boolean alterbeschraenkung, double alkoholgehalt, S marke){\n         this.name = name;\n         this.preis = preis;\n       // unsicher ob verknüpfung so funktioniert, bitte ändern falls nicht\n         this.alkoholgehalt = alkoholgehalt;\n         this.marke = marke;\n     }\n     // konstruktor coktail2\n    public Getraenk (S name, D preis, double alkoholgehalt, S mischgetränk, S spirituose){\n        this.name = name;\n        this.preis = preis;\n        this.alkoholgehalt = alkoholgehalt;\n        this.mischgetränk = mischgetränk;\n        this.spirituose = spirituose;\n\n    }\n    public  boolean fsk(double alkoholgehalt){ // unsicher ob verknüpfung so funktioniert, bitte ändern falls nicht\n        if (this.getAlkoholgehalt()==0){\n          return false;\n        } else {\n            return true; }\n    }\n\n\n    public S getName() {\n        return name;\n    }\n\n    public D getPreis() {\n        return preis;\n    }\n\n    public double getAlkoholgehalt() {\n        return alkoholgehalt;\n    }\n\n    public S getMischgetränk() {\n        return mischgetränk;\n    }\n\n    public S getSpirituose() {\n        return spirituose;\n    }\n\n    public S getMarke() {\n        return marke;\n    }\n// für GetränkeKarte\n    @Override\n    public String toString() {\n        return \" Name \" + \"\\t \" + getName() + \"\\t \" + \" Preis \" + \"\\t \"  + getPreis();\n    }\n}\n
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+---- test1/src/GetraenkObjekt/Getraenk.java	(revision 018d82e113e51914ca246b3252e1633f0b0177fe)
+-+++ test1/src/GetraenkObjekt/Getraenk.java	(date 1595671686484)
+-@@ -1,7 +1,7 @@
+- package GetraenkObjekt;
+- //S String, D double, B boolean
+- // wenn alkoholgehalt = Check ob 18
+--public  abstract class  Getraenk <S,D> {
+-+public class  Getraenk <S,D> {
+-          private S name;
+-          private D preis;
+-          private double alkoholgehalt;
+-@@ -9,14 +9,16 @@
+-          private S spirituose;
+-          private S marke;
+- 
+-+
+-+     // Standart-K
+-      public Getraenk(){};
+- 
+-      // konstrukor unalk2
+--     public Getraenk(S name, D preis ){
+-+     public Getraenk(S name, D preis){
+-          this.name = name;
+-          this.preis = preis;
+--     }
+- 
+-+     }
+-      // konstruktor bier2
+-      public Getraenk(S name, D preis, boolean alterbeschraenkung, double alkoholgehalt, S marke){
+-          this.name = name;
+-@@ -26,7 +28,7 @@
+-          this.marke = marke;
+-      }
+-      // konstruktor coktail2
+--    public Getraenk (S name, D preis, double alkoholgehalt, S mischgetränk, S spirituose){
+-+    public Getraenk (S name, D preis, boolean alterbeschraenkung, double alkoholgehalt, S mischgetränk, S spirituose){
+-         this.name = name;
+-         this.preis = preis;
+-         this.alkoholgehalt = alkoholgehalt;
+diff --git .idea/shelf/Uncommitted_changes_before_Update_at_25_07_20,_10_38_[Default_Changelist]/shelved.patch .idea/shelf/Uncommitted_changes_before_Update_at_25_07_20,_10_38_[Default_Changelist]/shelved.patch
+deleted file mode 100644

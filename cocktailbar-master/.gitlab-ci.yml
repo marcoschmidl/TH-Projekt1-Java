@@ -1,0 +1,23 @@
+
+stages:
+  - build
+  - execute
+
+
+build:
+  image: java:latest
+  stage: build
+  script:
+    - cd ./test1/src/Cocktailbar javac *.java
+
+  artifacts:
+    untracked: true
+
+execute:
+  image: java:latest
+  stage: execute
+  script:
+    - cd ./test1/src/Cocktailbar java StartUp
+
+
+

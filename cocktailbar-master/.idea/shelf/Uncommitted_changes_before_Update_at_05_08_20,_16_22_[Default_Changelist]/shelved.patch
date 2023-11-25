@@ -1,0 +1,48 @@
+Index: test1/src/Kasse.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import java.util.HashMap;\nimport java.util.Map;\n\npublic class Kasse {\n\n    public double sum;\n    public double umsatz = 0;\n    public double bestand;\n\n    public Kasse (double sum, double umsatz, double bestand){\n        this.sum = sum;\n        this.umsatz = umsatz;\n        this.bestand = bestand;\n    }\n\n    public static void KasseHochfahren(){\n        System.out.println(\"Kassensystem wird geladen.\");\n        System.out.println(\"Kassensystem ist jetzt einsatzbereit.\");\n        System.out.println(\"Fügen Sie einem Tisch eine Bestellung hinzu.\");\n    }\n\n    public double zeigeBestellung (HashMap<String, VorlageGetraenk> map){\n        sum = 0;\n        if (map.isEmpty()){\n            System.out.println(\"____________________________________________\");\n            System.out.println(\"Der Tisch enthält keine Bestellungen.\");\n        }\n        else {\n            System.out.println(\"Ihre Bestellung enthält: \");\n            System.out.println(\"____________________________________________\");\n            for (Map.Entry<String, VorlageGetraenk> entry : map.entrySet()){\n                System.out.print(entry.getValue().getName());\n                System.out.print(\"  \");\n                System.out.println(entry.getValue().getPreis());\n                double preis = (double) entry.getValue().getPreis();\n                sum = sum + preis;\n            }\n            System.out.println(\"____________________________________________\");\n            System.out.println(\"Die offene Rechnung beträgt: \" + sum);\n        }\n        return sum;\n    }\n\n    public double tischAbrechnen (HashMap<String, VorlageGetraenk> map){\n        umsatz = umsatz + sum;\n        map.clear();\n        System.out.println(\"Tisch abrechnen...\");\n        System.out.println(\"Die Rechnung wurde bezahlt.\");\n        System.out.println(\"Der aktuelle Tagesumsatz beträgt \" + umsatz + \" EUR\");\n        return umsatz;\n\n    }\n\n    public double zeigeTagesumsatz(){\n        System.out.println(\"Der aktuelle Tagesumsatz beträgt \" + umsatz + \" EUR\");\n        return umsatz;\n    }\n\n    public double zeigeKassenbestand(){\n        bestand = bestand + umsatz;\n        System.out.println(\"Der aktuelle Kassenbestand beträgt: \" + bestand + \" EUR\");\n        return bestand;\n    }\n\n    public double KasseRunterfahren(){\n        System.out.println();\n        System.out.println(\"Kasse wird heruntergefahren.....\");\n        System.out.println(\"....Kasse ist aus.\");\n        umsatz = 0;\n        return umsatz;\n    }\n\n    public static void karteAnzeigen(HashMap<String, VorlageGetraenk> testMap){\n        System.out.println(\"____________________________________________\");\n        for (Map.Entry<String, VorlageGetraenk> entry : testMap.entrySet()){\n            System.out.println(entry.getValue());\n        }\n        System.out.println(\"____________________________________________\");\n    }\n\n}\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- test1/src/Kasse.java	(revision 1ed593df4c6c57ae0bbdb0339702abc0f67b47cc)
++++ test1/src/Kasse.java	(date 1596637006000)
+@@ -13,9 +13,10 @@
+         this.bestand = bestand;
+     }
+ 
+-    public static void KasseHochfahren(){
++    public void KasseHochfahren(){
+         System.out.println("Kassensystem wird geladen.");
+         System.out.println("Kassensystem ist jetzt einsatzbereit.");
++        System.out.println("Der Anfangskassenbestand beträgt: " + bestand + " EUR");
+         System.out.println("Fügen Sie einem Tisch eine Bestellung hinzu.");
+     }
+ 
+Index: test1/src/StartUp.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import java.util.HashMap;\n\n\npublic final class StartUp {\n\n    public static void main(String[] args) {\n\n\n        //Eröffnen der Hauptkasse\n        Kasse hauptkasse = new Kasse (0, 0,1000);\n\n        // Getränke hier in der ArrayListe erstellen\n        UnalkoholischeGetraenke<String, Double> wasser = new UnalkoholischeGetraenke<>(\"Wasser     \", 2.80, \"Adelholzner\");\n        UnalkoholischeGetraenke<String, Double> spezi = new UnalkoholischeGetraenke<>(\"Spezi      \", 2.80, \"Flötzinger\");\n        UnalkoholischeGetraenke<String, Double> limo = new UnalkoholischeGetraenke<>(\"Limo        \", 2.80, \"Adelholzner\");\n\n        Bier<String, Double> helles = new Bier<>(\"Helles     \", 3.20, \"16\", 5.0, \"   Flötzinger\");\n        Bier<String, Double> dunklesbier = new Bier<>(\"Dunklesbier\", 3.30, \"16\", 5.2, \"   Augustiner\");\n        Bier<String, Double> weißbier = new Bier<>(\"Weißbier   \", 2.80, \"16\", 5.2, \"   Schneider\");\n\n        Cocktail<String, Double> vodkalemon = new Cocktail<>(\"VodkaLemon \", 8.2, \"18\", 15,   \"LemonWater\",  \"  Vodka\");\n        Cocktail<String, Double> gintonic = new Cocktail<>(\"Gintonic   \", 8.8, \"18\", 16,   \"TonicWater\",  \"  Gin  \");\n        Cocktail<String, Double> mojito = new Cocktail<>(\"Mojito     \", 8.5, \"18\", 16.5, \"SodaWater\", \"  Rum  \");\n\n        //Erstellung der Getränkekarte aus den vorhandenen Getränken\n        HashMap<String, VorlageGetraenk> getraenkeHashMap = new HashMap<String, VorlageGetraenk>();\n        getraenkeHashMap.put(\"1\",wasser);\n        getraenkeHashMap.put(\"2\",spezi);\n        getraenkeHashMap.put(\"3\",limo);\n        getraenkeHashMap.put(\"4\",helles);\n        getraenkeHashMap.put(\"5\",dunklesbier);\n        getraenkeHashMap.put(\"6\",weißbier);\n        getraenkeHashMap.put(\"7\",vodkalemon);\n        getraenkeHashMap.put(\"8\", gintonic);\n        getraenkeHashMap.put(\"9\", mojito);\n\n        //Gibt die erstelle HashMap für die Getränkekarte aus\n        Kasse.karteAnzeigen(getraenkeHashMap);\n\n        // Kasse Starten\n        Kasse.KasseHochfahren();\n\n        //Aufrufen eines neuen Tischs + Eingabe Bestellung\n        //Über die statische Methode \"zeigeBestellung2\" kann die Bestellung und der Rechnungsbetrag angezeigt werden.\n        Tisch tischEins = new Tisch(1);\n        HashMap <String, VorlageGetraenk> tischeins = new HashMap<String, VorlageGetraenk>();\n        tischEins.zeigeTisch();\n        tischeins.put(\"1\",wasser);\n        tischeins.put(\"2\",spezi);\n        tischeins.put(\"3\",helles);\n        hauptkasse.zeigeBestellung(tischeins);\n        hauptkasse.tischAbrechnen(tischeins);\n        //Erneuter Aufruf von zeigeBestellung() kann zur Prüfung benutzt werden ob Tisch leer ist.\n        hauptkasse.zeigeBestellung(tischeins);\n\n        Tisch tischZwei = new Tisch (2);\n        HashMap <String, VorlageGetraenk> tischzwei = new HashMap<String, VorlageGetraenk>();\n        tischZwei.zeigeTisch();\n        tischzwei.put(\"1\", mojito);\n        tischzwei.put(\"2\", vodkalemon);\n        tischzwei.put(\"3\", gintonic);\n        hauptkasse.zeigeBestellung(tischzwei);\n        hauptkasse.tischAbrechnen(tischzwei);\n        hauptkasse.zeigeBestellung(tischzwei);\n\n        hauptkasse.zeigeKassenbestand();\n        //Kasse wird heruntegefahren, der Tagesumsatz wird auf 0 zurückgesetzt.\n        hauptkasse.KasseRunterfahren();\n\n    }\n// test VCS\n}\n\n// methoden die nützlich sein könnten\n   /* static final int hash(Object key) {\n        int h;\n        return (key == null) ? 0 : (h = key.hashCode()) ^ (h >>> 16);\n\n    */\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- test1/src/StartUp.java	(revision 1ed593df4c6c57ae0bbdb0339702abc0f67b47cc)
++++ test1/src/StartUp.java	(date 1596637056000)
+@@ -38,7 +38,7 @@
+         Kasse.karteAnzeigen(getraenkeHashMap);
+ 
+         // Kasse Starten
+-        Kasse.KasseHochfahren();
++        hauptkasse.KasseHochfahren();
+ 
+         //Aufrufen eines neuen Tischs + Eingabe Bestellung
+         //Über die statische Methode "zeigeBestellung2" kann die Bestellung und der Rechnungsbetrag angezeigt werden.
+@@ -66,6 +66,8 @@
+         hauptkasse.zeigeKassenbestand();
+         //Kasse wird heruntegefahren, der Tagesumsatz wird auf 0 zurückgesetzt.
+         hauptkasse.KasseRunterfahren();
++        //Bei erneutem Hochfahren der Kasse, wird der neue Kassenbestand übergeben.
++        hauptkasse.KasseHochfahren();
+ 
+     }
+ // test VCS
